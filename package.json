@@ -12,7 +12,9 @@
     "fmt": "ci/fmt.sh",
     "runner": "cd ./ci && NODE_OPTIONS=--max_old_space_size=32384 ts-node ./build.ts",
     "build": "yarn runner build",
-    "watch": "yarn runner watch"
+    "watch": "yarn runner watch",
+    "start": "nodemon source/index.js",
+    "vs": "sudo PASSWORD='123' ./code-server"
   },
   "devDependencies": {
     "@types/adm-zip": "^0.4.32",
@@ -24,9 +26,9 @@
     "@types/pem": "^1.9.5",
     "@types/safe-compare": "^1.1.0",
     "@types/semver": "^7.1.0",
-    "@types/tar-fs": "^1.16.2",
     "@types/ssh2": "0.5.39",
     "@types/ssh2-streams": "^0.1.6",
+    "@types/tar-fs": "^1.16.2",
     "@types/tar-stream": "^1.6.1",
     "@types/ws": "^6.0.4",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
@@ -52,10 +54,12 @@
   "dependencies": {
     "@coder/logger": "1.1.11",
     "adm-zip": "^0.4.14",
+    "axios": "^0.19.2",
     "fs-extra": "^8.1.0",
     "http-proxy": "^1.18.0",
     "httpolyglot": "^0.1.2",
     "node-pty": "^0.9.0",
+    "nodemon": "^2.0.3",
     "pem": "^1.14.2",
     "safe-compare": "^1.1.4",
     "semver": "^7.1.3",
